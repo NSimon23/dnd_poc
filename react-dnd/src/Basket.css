@@ -1,0 +1,71 @@
+.basket {
+    border: 1px solid black;
+    height: 60vh;
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+}
+
+.folders {
+    border: 1px solid black;
+    height: 60vh;
+    width: 20vw;
+    margin: 2rem;
+}
+
+.names {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    place-content: center;
+    grid-column: 2 / 3;
+}
+
+.nameCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #ed9624;
+    border: none;
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: 16px;
+    font-size: 1rem;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.container {
+    grid-area: mn;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-content: center;
+}
+
+.header {
+    grid-area: hd;
+    padding: 0;
+    margin: 0;
+    max-height: 100px;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+.main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 100 px auto 100 px;
+    grid-template-areas:
+        'hd hd hd hd hd hd hd hd hd'
+        'mn mn mn mn mn mn mn mn mn'
+        'ft ft ft ft ft ft ft ft ft';
+    column-gap: 0.5rem;
+}
